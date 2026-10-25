@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIS Constructions Company Ltd | We Build What You Want</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A2035;
+  --navy-light: #252E4A;
+  --gold: #C6A54D;
+  --gold-hover: #B38F3A;
+  --white: #FFFFFF;
+  --off-white: #F8F9FA;
+  --text-muted: #A0AABF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--navy); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; }
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+/* Nav */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(26, 32, 53, 0.95); position: fixed; width: 100%; top: 0; z-index: 100; backdrop-filter: blur(10px); }
+.brand-wrap { display: flex; align-items: center; gap: 12px; }
+.logo-squares { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; width: 32px; height: 32px; }
+.logo-squares div { border: 2px solid var(--gold); }
+.brand-text { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.1; letter-spacing: 1px; }
+.brand-text span { display: block; font-size: 0.65rem; color: var(--gold); font-weight: 500; letter-spacing: 2px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: var(--gold); color: var(--navy); font-weight: 600; text-decoration: none; border-radius: 4px; transition: 0.3s; border: none; cursor: pointer; font-size: 1rem; }
+.btn:hover { background: var(--gold-hover); transform: translateY(-2px); }
+
+/* Hero */
+.hero { padding: 160px 5% 80px; text-align: center; background: linear-gradient(rgba(26, 32, 53, 0.85), rgba(26, 32, 53, 0.95)), url('https://images.unsplash.com/photo-1541888078693-01851612320f?auto=format&fit=crop&q=80') center/cover; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.hero h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1.1; margin-bottom: 20px; max-width: 900px; }
+.hero h1 span { color: var(--gold); font-style: italic; }
+.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 40px; }
+
+/* Services */
+.section { padding: 80px 5%; }
+.section-title { text-align: center; color: var(--gold); font-size: 1rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
+.section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+.service-card { background: var(--navy-light); padding: 40px 30px; border-top: 3px solid var(--gold); transition: 0.3s; }
+.service-card:hover { transform: translateY(-5px); background: #2A3454; }
+.service-card h3 { font-family: 'Inter', sans-serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--gold); }
+
+/* Estimator */
+.estimator { background: var(--off-white); color: var(--navy); padding: 80px 5%; }
+.estimator h2 { color: var(--navy); }
+.est-box { background: var(--white); max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 20px; }
+label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; }
+select, input { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 16px; }
+.total-box { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px dashed #ccc; }
+.total-box h3 { font-size: 1.2rem; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
+.total-box .price { font-size: 2.5rem; font-weight: 800; color: var(--gold); }
+.watermark { text-align: center; font-size: 0.75rem; color: #999; margin-top: 20px; }
+
+/* Footer */
+footer { padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand-wrap">
+    <div class="logo-squares"><div></div><div></div><div></div><div></div></div>
+    <div class="brand-text">SIS<span>CONSTRUCTIONS</span></div>
+  </div>
+  <a href="#contact" class="btn" style="display:none;">Get a Quote</a>
+</nav>
+
+<section class="hero">
+  <h1>Remember, we BUILD what you <span>WANT.</span></h1>
+  <p>Premium construction, design, and interior solutions for residential and commercial clients.</p>
+  <a href="#estimator" class="btn">Estimate Your Project &rarr;</a>
+</section>
+
+<section class="section">
+  <p class="section-title">Our Expertise</p>
+  <h2>Building Excellence</h2>
+  <div class="grid">
+    <div class="service-card"><h3>Construction</h3><p>Turnkey building of residential and commercial structures from foundation to finishing.</p></div>
+    <div class="service-card"><h3>Design & Build</h3><p>Architectural planning and seamless execution under one roof.</p></div>
+    <div class="service-card"><h3>Renovation</h3><p>Transforming outdated spaces into modern, functional environments.</p></div>
+    <div class="service-card"><h3>Interior & Flooring</h3><p>High-end interior design, tiling, and premium flooring installations.</p></div>
+    <div class="service-card"><h3>Consulting</h3><p>Expert project management and structural advisory services.</p></div>
+    <div class="service-card"><h3>Support</h3><p>Dedicated post-construction maintenance and facility management.</p></div>
+  </div>
+</section>
+
+<section class="estimator" id="estimator">
+  <p class="section-title" style="color: var(--gold);">Instant Quote</p>
+  <h2>Calculate Your Project</h2>
+  <div class="est-box">
+    <div class="form-group">
+      <label>Service Type</label>
+      <select id="service">
+        <option value="25000000">New Construction (Building)</option>
+        <option value="8000000">Complete Renovation</option>
+        <option value="5000000">Interior & Flooring</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Scale / Size (Approximate)</label>
+      <select id="size">
+        <option value="1">Standard (3 Bedroom / Small Office)</option>
+        <option value="1.8">Large (5 Bedroom / Multi-floor)</option>
+        <option value="2.5">Commercial (Plaza / Estate)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Finishing Quality</label>
+      <select id="finish">
+        <option value="1">Standard Finishing</option>
+        <option value="1.4">Premium / Luxury Finishing</option>
+      </select>
+    </div>
+    <div class="total-box">
+      <h3>Estimated Budget Range</h3>
+      <div class="price" id="total">₦25,000,000</div>
+    </div>
+    <a href="https://wa.me/2349063200718?text=I%20used%20the%20SIS%20Constructions%20estimator%20and%20I'd%20like%20to%20discuss%20my%20project" target="_blank" class="btn" style="width: 100%; margin-top: 20px; background: var(--navy); color: var(--white);">Send Estimate to SIS &rarr;</a>
+  </div>
+  <div class="watermark">Interactive Prototype by OProducts Studio</div>
+</section>
+
+<footer>
+  <div class="logo-squares" style="margin: 0 auto 15px;"><div></div><div></div><div></div><div></div></div>
+  &copy; 2026 SIS Constructions Company Ltd. All Rights Reserved.
+</footer>
+
+<script>
+  const service = document.getElementById('service');
+  const size = document.getElementById('size');
+  const finish = document.getElementById('finish');
+  const totalEl = document.getElementById('total');
+
+  function calculate() {
+    const base = parseFloat(service.value);
+    const sizeMulti = parseFloat(size.value);
+    const finishMulti = parseFloat(finish.value);
+    
+    const total = base * sizeMulti * finishMulti;
+    
+    // Format as Naira
+    totalEl.innerText = '₦' + total.toLocaleString('en-NG');
+  }
+
+  service.addEventListener('change', calculate);
+  size.addEventListener('change', calculate);
+  finish.addEventListener('change', calculate);
+</script>
+
+</body>
+</html>
