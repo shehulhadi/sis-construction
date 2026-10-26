@@ -58,6 +58,22 @@ select, input { width: 100%; padding: 14px; border: 1px solid #ccc; border-radiu
 
 /* Footer */
 footer { padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); font-size: 0.9rem; }
+
+/* Portfolio */
+.portfolio { padding: 80px 5%; background: var(--navy-light); }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
+.port-item { border-radius: 8px; overflow: hidden; height: 250px; position: relative; }
+.port-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+.port-item:hover img { transform: scale(1.05); }
+
+/* Team */
+.team { padding: 80px 5%; background: var(--navy); text-align: center; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto 0; }
+.team-member { background: var(--navy-light); padding: 30px 20px; border-radius: 8px; border-bottom: 3px solid var(--gold); }
+.team-member img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--gold); }
+.team-member h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--white); margin-bottom: 4px; }
+.team-member p { font-size: 0.85rem; color: var(--gold); }
+
 </style>
 </head>
 <body>
@@ -89,7 +105,44 @@ footer { padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,25
   </div>
 </section>
 
+
+<!-- PORTFOLIO (OUR WORK) -->
+<section class="portfolio">
+  <p class="section-title">Our Portfolio</p>
+  <h2 style="text-align: center; margin-bottom: 40px; color: var(--white);">Recent Projects</h2>
+  <div class="portfolio-grid">
+    <div class="port-item"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Luxury Duplex"></div>
+    <div class="port-item"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Commercial Building"></div>
+    <div class="port-item"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80" alt="Modern Interior"></div>
+    <div class="port-item"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" alt="Construction Site"></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <p class="section-title">Our Leadership</p>
+  <h2 style="text-align: center; margin-bottom: 40px;">Meet the Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" alt="MD">
+      <h4>Engr. Suleiman I.</h4>
+      <p>Managing Director</p>
+    </div>
+    <div class="team-member">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Architect">
+      <h4>Arc. Fatima A.</h4>
+      <p>Lead Architect</p>
+    </div>
+    <div class="team-member">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" alt="Site Manager">
+      <h4>Engr. Bello M.</h4>
+      <p>Project Manager</p>
+    </div>
+  </div>
+</section>
+
 <section class="estimator" id="estimator">
+
   <p class="section-title" style="color: var(--gold);">Instant Quote</p>
   <h2>Calculate Your Project</h2>
   <div class="est-box">
