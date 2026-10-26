@@ -4,206 +4,324 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SIS Constructions Company Ltd | We Build What You Want</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<meta name="description" content="Premium construction, design and interior solutions for residential and commercial clients in Yola, Adamawa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #1A2035;
-  --navy-light: #252E4A;
-  --gold: #C6A54D;
-  --gold-hover: #B38F3A;
-  --white: #FFFFFF;
-  --off-white: #F8F9FA;
-  --text-muted: #A0AABF;
+:root{
+  --navy-900:#0e1228;
+  --navy-800:#151a38;
+  --navy-700:#1d2347;
+  --navy-600:#2a3160;
+  --gold:#c9a54b;
+  --gold-soft:#e3c981;
+  --ink:#1a1f3a;
+  --muted:#6b7190;
+  --line:rgba(255,255,255,.1);
+  --paper:#f6f7fb;
+  --radius:14px;
+  --wrap:1200px;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--navy); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; }
-h1, h2, h3 { font-family: 'Playfair Display', serif; }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Inter,system-ui,sans-serif;color:#e8eaf5;background:var(--navy-900);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.15}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.section{padding:104px 0}
+.section-head{max-width:640px;margin-bottom:56px}
+.section-head h2{font-size:2.6rem;margin-top:12px;color:#fff}
+.section-head p{margin-top:14px;color:#aab0cf;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:.25s}
+.btn-gold{background:var(--gold);color:var(--navy-900)}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-1px)}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 
-/* Nav */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(26, 32, 53, 0.95); position: fixed; width: 100%; top: 0; z-index: 100; backdrop-filter: blur(10px); }
-.brand-wrap { display: flex; align-items: center; gap: 12px; }
-.logo-squares { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; width: 32px; height: 32px; }
-.logo-squares div { border: 2px solid var(--gold); }
-.brand-text { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.1; letter-spacing: 1px; }
-.brand-text span { display: block; font-size: 0.65rem; color: var(--gold); font-weight: 500; letter-spacing: 2px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: var(--gold); color: var(--navy); font-weight: 600; text-decoration: none; border-radius: 4px; transition: 0.3s; border: none; cursor: pointer; font-size: 1rem; }
-.btn:hover { background: var(--gold-hover); transform: translateY(-2px); }
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,18,40,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:34px;height:34px;display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.logo-mark i{border:2px solid var(--gold);border-radius:3px}
+.logo b{display:block;font-size:1.05rem;letter-spacing:.14em;color:#fff;line-height:1}
+.logo small{display:block;font-size:.6rem;letter-spacing:.32em;color:var(--gold);margin-top:4px}
+.menu{display:flex;gap:36px;font-size:.92rem;color:#c9cde6}
+.menu a:hover{color:var(--gold)}
+.nav .btn{padding:10px 20px;font-size:.88rem}
 
-/* Hero */
-.hero { padding: 160px 5% 80px; text-align: center; background: linear-gradient(rgba(26, 32, 53, 0.85), rgba(26, 32, 53, 0.95)), url('https://images.unsplash.com/photo-1541888078693-01851612320f?auto=format&fit=crop&q=80') center/cover; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.hero h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1.1; margin-bottom: 20px; max-width: 900px; }
-.hero h1 span { color: var(--gold); font-style: italic; }
-.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 40px; }
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:72px;
+  background:linear-gradient(100deg,rgba(14,18,40,.96) 0%,rgba(14,18,40,.82) 48%,rgba(14,18,40,.35) 100%),
+  url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80") center/cover,var(--navy-800)}
+.hero-inner{max-width:720px;padding:80px 0}
+.hero h1{font-size:4.2rem;color:#fff;margin:18px 0 22px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:1.2rem;color:#c3c8e4;max-width:540px}
+.hero .actions{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+.hero-strip{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--line);background:rgba(14,18,40,.7);backdrop-filter:blur(8px)}
+.hero-strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:22px;padding-bottom:22px;font-size:.9rem;color:#c3c8e4}
+.hero-strip span{display:flex;align-items:center;gap:10px}
+.hero-strip span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
 
-/* Services */
-.section { padding: 80px 5%; }
-.section-title { text-align: center; color: var(--gold); font-size: 1rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
-.section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
-.service-card { background: var(--navy-light); padding: 40px 30px; border-top: 3px solid var(--gold); transition: 0.3s; }
-.service-card:hover { transform: translateY(-5px); background: #2A3454; }
-.service-card h3 { font-family: 'Inter', sans-serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--gold); }
+/* EXPERTISE */
+.expertise{background:var(--navy-800)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--navy-700);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px 32px;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:rgba(201,165,75,.55);box-shadow:0 22px 50px rgba(0,0,0,.35)}
+.card .num{font-family:"Playfair Display",serif;font-size:2.4rem;color:rgba(201,165,75,.35);font-weight:700}
+.card h3{font-size:1.4rem;color:#fff;margin:14px 0 10px}
+.card p{color:#aab0cf;font-size:.97rem}
 
-/* Estimator */
-.estimator { background: var(--off-white); color: var(--navy); padding: 80px 5%; }
-.estimator h2 { color: var(--navy); }
-.est-box { background: var(--white); max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-.form-group { margin-bottom: 20px; }
-label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; }
-select, input { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 16px; }
-.total-box { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px dashed #ccc; }
-.total-box h3 { font-size: 1.2rem; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
-.total-box .price { font-size: 2.5rem; font-weight: 800; color: var(--gold); }
-.watermark { text-align: center; font-size: 0.75rem; color: #999; margin-top: 20px; }
+/* PORTFOLIO */
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:260px;gap:20px}
+.shot{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--navy-700)}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.shot:hover img{transform:scale(1.06)}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,18,40,.9))}
+.shot figcaption{position:absolute;left:24px;bottom:20px;z-index:2}
+.shot figcaption b{display:block;font-family:"Playfair Display",serif;font-size:1.3rem;color:#fff}
+.shot figcaption small{color:var(--gold-soft);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.s1{grid-column:span 7;grid-row:span 2}
+.s2{grid-column:span 5}
+.s3{grid-column:span 5}
 
-/* Footer */
-footer { padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); font-size: 0.9rem; }
+/* TEAM */
+.team{background:var(--navy-800)}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.person{background:var(--navy-700);border:1px solid var(--line);border-radius:var(--radius);padding:40px 24px 34px;text-align:center}
+.person img{width:116px;height:116px;border-radius:50%;object-fit:cover;margin:0 auto 20px;border:3px solid var(--gold)}
+.person h3{font-size:1.3rem;color:#fff}
+.person p{color:var(--gold);font-size:.9rem;margin-top:6px;letter-spacing:.04em}
 
-/* Portfolio */
-.portfolio { padding: 80px 5%; background: var(--navy-light); }
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
-.port-item { border-radius: 8px; overflow: hidden; height: 250px; position: relative; }
-.port-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-.port-item:hover img { transform: scale(1.05); }
+/* ESTIMATOR */
+.estimator{background:linear-gradient(180deg,var(--navy-900),#0a0d20)}
+.est-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+.est-copy h2{font-size:2.8rem;color:#fff;margin:12px 0 18px}
+.est-copy p{color:#aab0cf;font-size:1.05rem;max-width:460px}
+.steps{margin-top:34px;display:grid;gap:18px}
+.steps div{display:flex;gap:16px;align-items:flex-start;color:#c9cde6}
+.steps b{flex:none;width:34px;height:34px;border-radius:50%;background:rgba(201,165,75,.15);border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-size:.9rem}
+.calc{background:#fff;color:var(--ink);border-radius:20px;padding:40px;box-shadow:0 40px 90px rgba(0,0,0,.5)}
+.calc h3{font-size:1.5rem;margin-bottom:24px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:.82rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field select{width:100%;padding:14px 16px;font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid #dfe2ee;border-radius:10px;appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%236b7190' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.field select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.result{margin:28px 0 24px;padding-top:24px;border-top:1px dashed #cfd3e6;text-align:center}
+.result small{display:block;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.result strong{display:block;font-family:"Playfair Display",serif;font-size:3rem;color:var(--gold);margin:6px 0 2px;font-variant-numeric:lining-nums}
+.result span{font-size:.9rem;color:var(--muted)}
+.calc .btn{width:100%;justify-content:center;background:var(--navy-800);color:#fff;padding:16px}
+.calc .btn:hover{background:var(--navy-600)}
+.fine{margin-top:14px;font-size:.78rem;color:var(--muted);text-align:center}
 
-/* Team */
-.team { padding: 80px 5%; background: var(--navy); text-align: center; }
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto 0; }
-.team-member { background: var(--navy-light); padding: 30px 20px; border-radius: 8px; border-bottom: 3px solid var(--gold); }
-.team-member img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid var(--gold); }
-.team-member h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--white); margin-bottom: 4px; }
-.team-member p { font-size: 0.85rem; color: var(--gold); }
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:40px 0;background:#0a0d20;color:#8e94b6;font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .menu{display:none}
+  .hero h1{font-size:3rem}
+  .hero-strip{position:static}
+  .hero{flex-direction:column;align-items:stretch;justify-content:center}
+  .hero-strip .wrap{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .people{grid-template-columns:1fr}
+  .est-grid{grid-template-columns:1fr;gap:48px}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+  .s1,.s2,.s3{grid-column:span 1;grid-row:auto}
+  .section{padding:72px 0}
+}
+@media (max-width:620px){
+  .wrap{padding:0 20px}
+  .hero h1{font-size:2.4rem}
+  .cards,.gallery{grid-template-columns:1fr}
+  .section-head h2,.est-copy h2{font-size:2rem}
+  .calc{padding:26px}
+  .result strong{font-size:2.3rem}
+  .hero-strip .wrap{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="brand-wrap">
-    <div class="logo-squares"><div></div><div></div><div></div><div></div></div>
-    <div class="brand-text">SIS<span>CONSTRUCTIONS</span></div>
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="SIS Constructions">
+      <span class="logo-mark"><i></i><i></i><i></i><i></i></span>
+      <span><b>SIS</b><small>CONSTRUCTIONS</small></span>
+    </a>
+    <nav class="menu">
+      <a href="#expertise">Expertise</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#team">Leadership</a>
+      <a href="#estimator">Estimator</a>
+    </nav>
+    <a href="#estimator" class="btn btn-gold">Get a Quote</a>
   </div>
-  <a href="#contact" class="btn" style="display:none;">Get a Quote</a>
-</nav>
+</header>
 
-<section class="hero">
-  <h1>Remember, we BUILD what you <span>WANT.</span></h1>
-  <p>Premium construction, design, and interior solutions for residential and commercial clients.</p>
-  <a href="#estimator" class="btn">Estimate Your Project &rarr;</a>
-</section>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="eyebrow">Yola · Adamawa · Nigeria</span>
+        <h1>Remember, we BUILD what you <em>WANT.</em></h1>
+        <p>Premium construction, design and interior solutions for residential and commercial clients.</p>
+        <div class="actions">
+          <a href="#estimator" class="btn btn-gold">Estimate Your Project →</a>
+          <a href="#portfolio" class="btn btn-ghost">View Our Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="wrap">
+        <span>Turnkey construction</span>
+        <span>Design &amp; build under one roof</span>
+        <span>Premium interiors &amp; flooring</span>
+        <span>After-build support</span>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-  <p class="section-title">Our Expertise</p>
-  <h2>Building Excellence</h2>
-  <div class="grid">
-    <div class="service-card"><h3>Construction</h3><p>Turnkey building of residential and commercial structures from foundation to finishing.</p></div>
-    <div class="service-card"><h3>Design & Build</h3><p>Architectural planning and seamless execution under one roof.</p></div>
-    <div class="service-card"><h3>Renovation</h3><p>Transforming outdated spaces into modern, functional environments.</p></div>
-    <div class="service-card"><h3>Interior & Flooring</h3><p>High-end interior design, tiling, and premium flooring installations.</p></div>
-    <div class="service-card"><h3>Consulting</h3><p>Expert project management and structural advisory services.</p></div>
-    <div class="service-card"><h3>Support</h3><p>Dedicated post-construction maintenance and facility management.</p></div>
-  </div>
-</section>
+  <section class="section expertise" id="expertise">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Expertise</span>
+        <h2>Building Excellence</h2>
+        <p>From the first sketch to the final coat of paint, one team takes care of everything.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="num">01</div><h3>Construction</h3><p>Turnkey building of residential and commercial structures from foundation to finishing.</p></article>
+        <article class="card"><div class="num">02</div><h3>Design &amp; Build</h3><p>Architectural planning and seamless execution under one roof.</p></article>
+        <article class="card"><div class="num">03</div><h3>Renovation</h3><p>Transforming outdated spaces into modern, functional environments.</p></article>
+        <article class="card"><div class="num">04</div><h3>Interior &amp; Flooring</h3><p>High-end interior design, tiling and premium flooring installations.</p></article>
+        <article class="card"><div class="num">05</div><h3>Consulting</h3><p>Expert project management and structural advisory services.</p></article>
+        <article class="card"><div class="num">06</div><h3>Support</h3><p>Dedicated post-construction maintenance and facility management.</p></article>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Portfolio</span>
+        <h2>Recent Projects</h2>
+        <p>A selection of homes, offices and interiors delivered for our clients.</p>
+      </div>
+      <div class="gallery">
+        <figure class="shot s1"><img loading="lazy" alt="Luxury duplex with pool" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=80"><figcaption><b>Luxury Duplex</b><small>Residential</small></figcaption></figure>
+        <figure class="shot s2"><img loading="lazy" alt="Commercial high-rise building" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"><figcaption><b>Commercial Tower</b><small>Commercial</small></figcaption></figure>
+        <figure class="shot s3"><img loading="lazy" alt="Modern home exterior" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80"><figcaption><b>Modern Residence</b><small>Design &amp; Build</small></figcaption></figure>
+        <figure class="shot s2"><img loading="lazy" alt="Architect reviewing building plans" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"><figcaption><b>Planning &amp; Consulting</b><small>Advisory</small></figcaption></figure>
+      </div>
+    </div>
+  </section>
 
-<!-- PORTFOLIO (OUR WORK) -->
-<section class="portfolio">
-  <p class="section-title">Our Portfolio</p>
-  <h2 style="text-align: center; margin-bottom: 40px; color: var(--white);">Recent Projects</h2>
-  <div class="portfolio-grid">
-    <div class="port-item"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Luxury Duplex"></div>
-    <div class="port-item"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Commercial Building"></div>
-    <div class="port-item"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80" alt="Modern Interior"></div>
-    <div class="port-item"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80" alt="Construction Site"></div>
-  </div>
-</section>
+  <section class="section team" id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Leadership</span>
+        <h2>Meet the Team</h2>
+      </div>
+      <div class="people">
+        <article class="person"><img loading="lazy" alt="Engr. Suleiman I." src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80"><h3>Engr. Suleiman I.</h3><p>Managing Director</p></article>
+        <article class="person"><img loading="lazy" alt="Arc. Fatima A." src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"><h3>Arc. Fatima A.</h3><p>Lead Architect</p></article>
+        <article class="person"><img loading="lazy" alt="Engr. Bello M." src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"><h3>Engr. Bello M.</h3><p>Project Manager</p></article>
+      </div>
+    </div>
+  </section>
 
-<!-- TEAM -->
-<section class="team">
-  <p class="section-title">Our Leadership</p>
-  <h2 style="text-align: center; margin-bottom: 40px;">Meet the Team</h2>
-  <div class="team-grid">
-    <div class="team-member">
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" alt="MD">
-      <h4>Engr. Suleiman I.</h4>
-      <p>Managing Director</p>
-    </div>
-    <div class="team-member">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Architect">
-      <h4>Arc. Fatima A.</h4>
-      <p>Lead Architect</p>
-    </div>
-    <div class="team-member">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80" alt="Site Manager">
-      <h4>Engr. Bello M.</h4>
-      <p>Project Manager</p>
-    </div>
-  </div>
-</section>
+  <section class="section estimator" id="estimator">
+    <div class="wrap est-grid">
+      <div class="est-copy">
+        <span class="eyebrow">Instant Quote</span>
+        <h2>Know your budget before you call.</h2>
+        <p>Answer three quick questions and get a starting budget range. Send it to us on WhatsApp and we will take it from there.</p>
+        <div class="steps">
+          <div><b>1</b><span>Choose the type of work</span></div>
+          <div><b>2</b><span>Pick the size and finishing quality</span></div>
+          <div><b>3</b><span>Send your estimate to SIS with one tap</span></div>
+        </div>
+      </div>
 
-<section class="estimator" id="estimator">
-
-  <p class="section-title" style="color: var(--gold);">Instant Quote</p>
-  <h2>Calculate Your Project</h2>
-  <div class="est-box">
-    <div class="form-group">
-      <label>Service Type</label>
-      <select id="service">
-        <option value="25000000">New Construction (Building)</option>
-        <option value="8000000">Complete Renovation</option>
-        <option value="5000000">Interior & Flooring</option>
-      </select>
+      <div class="calc">
+        <h3>Calculate Your Project</h3>
+        <div class="field">
+          <label for="service">Service Type</label>
+          <select id="service">
+            <option value="construction">New Construction (Building)</option>
+            <option value="renovation">Complete Renovation</option>
+            <option value="interior">Interior &amp; Flooring</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="size">Scale / Size (Approximate)</label>
+          <select id="size">
+            <option value="standard">Standard (3 Bedroom / Small Office)</option>
+            <option value="large">Large (5 Bedroom / Multi-floor)</option>
+            <option value="commercial">Commercial (Plaza / Estate)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="finish">Finishing Quality</label>
+          <select id="finish">
+            <option value="standard">Standard Finishing</option>
+            <option value="premium">Premium / Luxury Finishing</option>
+          </select>
+        </div>
+        <div class="result">
+          <small>Estimated Budget Range</small>
+          <strong id="price">₦25,000,000</strong>
+          <span id="range">Typical range ₦22.5M – ₦28.8M</span>
+        </div>
+        <a id="send" class="btn" target="_blank" rel="noopener">Send Estimate to SIS →</a>
+        <p class="fine">Indicative figures only. Final price follows a site visit and full quotation.</p>
+      </div>
     </div>
-    <div class="form-group">
-      <label>Scale / Size (Approximate)</label>
-      <select id="size">
-        <option value="1">Standard (3 Bedroom / Small Office)</option>
-        <option value="1.8">Large (5 Bedroom / Multi-floor)</option>
-        <option value="2.5">Commercial (Plaza / Estate)</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Finishing Quality</label>
-      <select id="finish">
-        <option value="1">Standard Finishing</option>
-        <option value="1.4">Premium / Luxury Finishing</option>
-      </select>
-    </div>
-    <div class="total-box">
-      <h3>Estimated Budget Range</h3>
-      <div class="price" id="total">₦25,000,000</div>
-    </div>
-    <a href="https://wa.me/2349063200718?text=I%20used%20the%20SIS%20Constructions%20estimator%20and%20I'd%20like%20to%20discuss%20my%20project" target="_blank" class="btn" style="width: 100%; margin-top: 20px; background: var(--navy); color: var(--white);">Send Estimate to SIS &rarr;</a>
-  </div>
-  <div class="watermark">Interactive Prototype by OProducts Studio</div>
-</section>
+  </section>
+</main>
 
 <footer>
-  <div class="logo-squares" style="margin: 0 auto 15px;"><div></div><div></div><div></div><div></div></div>
-  &copy; 2026 SIS Constructions Company Ltd. All Rights Reserved.
+  <div class="wrap">
+    <span>© 2026 SIS Constructions Company Ltd. All Rights Reserved.</span>
+    <span>Interactive prototype by OProducts Studio</span>
+  </div>
 </footer>
 
 <script>
-  const service = document.getElementById('service');
-  const size = document.getElementById('size');
-  const finish = document.getElementById('finish');
-  const totalEl = document.getElementById('total');
+// Edit these numbers to match SIS's real pricing.
+const PRICING = {
+  base:    { standard: 25000000, large: 60000000, commercial: 150000000 },
+  service: { construction: 1, renovation: 0.45, interior: 0.3 },
+  finish:  { standard: 1, premium: 1.45 },
+  rangeLow: 0.9, rangeHigh: 1.15,
+  whatsapp: "2349063200718"
+};
+const $ = id => document.getElementById(id);
+const naira = n => "₦" + Math.round(n).toLocaleString("en-NG");
+const short = n => "₦" + (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
 
-  function calculate() {
-    const base = parseFloat(service.value);
-    const sizeMulti = parseFloat(size.value);
-    const finishMulti = parseFloat(finish.value);
-    
-    const total = base * sizeMulti * finishMulti;
-    
-    // Format as Naira
-    totalEl.innerText = '₦' + total.toLocaleString('en-NG');
-  }
-
-  service.addEventListener('change', calculate);
-  size.addEventListener('change', calculate);
-  finish.addEventListener('change', calculate);
+function update(){
+  const s = $("service"), z = $("size"), f = $("finish");
+  const est = PRICING.base[z.value] * PRICING.service[s.value] * PRICING.finish[f.value];
+  $("price").textContent = naira(est);
+  $("range").textContent = "Typical range " + short(est * PRICING.rangeLow) + " – " + short(est * PRICING.rangeHigh);
+  const msg = "Hello SIS Constructions, I used your estimator and I'd like to discuss my project.\n" +
+    "Service: " + s.options[s.selectedIndex].text + "\n" +
+    "Size: " + z.options[z.selectedIndex].text + "\n" +
+    "Finish: " + f.options[f.selectedIndex].text + "\n" +
+    "Estimate: " + naira(est);
+  $("send").href = "https://wa.me/" + PRICING.whatsapp + "?text=" + encodeURIComponent(msg);
+}
+["service","size","finish"].forEach(id => $(id).addEventListener("change", update));
+update();
 </script>
-
 </body>
 </html>
